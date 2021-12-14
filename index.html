@@ -60,7 +60,7 @@
         <div class="container">
           <h1 class="banner-title">Эффективные решения для вашего бизнеса</h1>
 
-          <button class="banner-button" type="button" data-modal-open>Заказать услугу</button>
+          <button class="button" type="button" data-modal-open>Заказать услугу</button>
         </div>
       </section>
 
@@ -505,20 +505,62 @@
         </div>
         <div class="footer-sign">
           <p class="footer-sign-title">Подпишитесь на рассылку</p>
-          <button class="footer-sign-button" type="button">Подписаться</button>
+          <button class="footer-sign-button" type="submit">Подписаться</button>
         </div>
       </div>
       
     </footer>
 
     <div class="banner-backdrop is-hidden" data-modal>
-      <div class="banner-modal"><button class="modal-button" type="button" data-modal-close><svg class="modal-closer" width="11px" height="11px">
-        <use href="./img/icons.svg#icon-vector"></use></button>
-      </svg>
+      <div class="banner-modal">
+        <button class="modal-close-button" type="button" data-modal-close>
+          <svg class="modal-closer" width="11px" height="11px">
+            <use href="./img/icons.svg#icon-vector"></use>
+          </svg>
+        </button>
+      <form class="js-speaker-form" action="">
+        <p class="modal-title">Оставьте свои данные, мы вам перезвоним</p>
+        <ul class="modal-list list">
+          <li class="modal-list-item">
+            <label class="modal-label" for="name">Имя</label>
+            <input class="modal-input" type="text" name="name" id="name">
+          </li>
+          <li class="modal-list-item">
+            <label class="modal-label" for="tel">Телефон</label>
+            <input class="modal-input" type="tel" name="tel" id="tel">
+          </li>
+          <li class="modal-list-item"> 
+            <label class="modal-label" for="mail">Почта</label>
+            <input class="modal-input" type="email" name="mail" id="mail">
+          </li>
+          <li class="modal-list-item">
+            <label class="modal-label" for="comment">Комментарий</label>
+            <textarea class="modal-textarea" name="comment" id="comment" rows="10" placeholder="Введите текст"></textarea>
+          </li>
+        </ul>
+        <div class="modal-checkbox">
+        <input type="checkbox" name="policy" id="policy">
+        <label class="modal-label-checkbox" for="policy">Соглашаюсь с рассылкой и принимаю <a class="modal-policy-link" href="">Условия договора</a></label>
+      </div> 
+        <button class="button" type="submit">Отправить</button>
+      </form>
      </div>
     </div>
     
     <script src="./js/modal.js"></script>
+    <script>
+      (( ) => {
+        document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+          );
+        });
+      })();
+    </script>
 
   </body>
 </html>
