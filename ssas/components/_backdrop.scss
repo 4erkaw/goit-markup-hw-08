@@ -1,22 +1,22 @@
-.banner-backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.2);
-    /* pointer-events: none; */
-    opacity: 1;
-  
-    transition: opacity 250ms var(--animate);
-  }
-  
-  .banner-backdrop.is-hidden {
+.banner__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  /* pointer-events: none; */
+  opacity: 1;
+
+  transition: opacity 250ms var(--animate);
+
+  &.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-      & .banner-modal {
-          transform: translate(-50%, -50%) scale(1.2);
-          opacity: 0;
+    & .banner-modal {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 0;
     }
   }
+}

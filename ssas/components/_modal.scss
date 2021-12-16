@@ -16,7 +16,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  .modal-close-button {
+  &-close__button {
     right: 8px;
     top: 8px;
     position: absolute;
@@ -35,7 +35,7 @@
     }
   }
 
-  &-title {
+  &__title {
     margin-bottom: 12px;
 
     font-weight: 700;
@@ -49,7 +49,7 @@
     margin-bottom: 20px;
   }
 
-  &-list-item {
+  &-list__item {
     position: relative;
     margin-bottom: 10px;
 
@@ -57,7 +57,7 @@
     flex-direction: column;
   }
 
-  &-label {
+  &__label {
     margin-bottom: 4px;
 
     font-size: 12px;
@@ -67,7 +67,7 @@
     color: var(--secondary-text-color);
   }
 
-  &-input {
+  &__input {
     padding-left: 42px;
 
     width: 448px;
@@ -76,30 +76,26 @@
     box-sizing: border-box;
     border-radius: 4px;
 
-    transition: outline-color 250ms var(--animate);
-
+    transition: color 250ms var(--animate),
+    outline-color 250ms var(--animate);
     &:focus {
       outline-color: var(--accent-color);
     }
 
-    &:focus + .input-icon {
+    &:focus + .modal__input-icon {
       fill: currentColor;
     }
   }
 
-  .input-icon {
+  &__input-icon {
     position: absolute;
     top: 50%;
     left: 15px;
     color: var(--accent-color);
-    transition: color 250ms var(--animate);
-
-    &:focus + .input-icon {
-      fill: currentColor;
-    }
+    transition: fill 250ms var(--animate);
   }
 
-  &-textarea {
+  &__textarea {
     height: 120px;
     width: 448px;
 
@@ -122,15 +118,23 @@
     }
   }
 
-  &-checkbox {
+  &__policy {
     padding: 0 11px;
     margin-bottom: 30px;
   }
 
-  &-label-checkbox {
-    appearance: none;
+  &-label__checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+  }
 
-    &:checked + .checkbox {
+  &-label__checkbox--hidden {
+    appearance: none;
+    &:checked + .modal__checkbox {
       background-color: var(--accent-color);
       border-color: var(--accent-color);
       background-image: url(../img/iconcheck.svg);
@@ -139,30 +143,18 @@
     }
   }
 
-  &-label-checkbox-text {
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    line-height: 1.71;
-
-    letter-spacing: 0.03em;
-    color: var(--secondary-text-color);
-    appearance: none;
-  }
-
-  &-policy-link {
+  &-policy__link {
     color: var(--accent-color);
     margin-left: 3px;
   }
-}
 
-.checkbox {
-  margin-right: 8px;
-  display: block;
+  &__checkbox {
+    margin-right: 8px;
+    display: block;
 
-  width: 16px;
-  height: 15px;
-  border: 2px solid var(--primary-text-color);
-  border-radius: 2px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-text-color);
+    border-radius: 2px;
+  }
 }

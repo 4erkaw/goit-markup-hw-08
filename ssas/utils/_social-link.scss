@@ -1,0 +1,18 @@
+.social{
+    &__link {
+      display: flex;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      justify-content: center;
+      align-items: center;
+    
+      transition: background-color 250ms var(--animate), color 250ms var(--animate),
+        transform 250ms var(--animate);
+    
+      &:focus,
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }

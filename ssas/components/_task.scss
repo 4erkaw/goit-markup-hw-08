@@ -1,5 +1,6 @@
-.task{
-  &-title {
+.task-section{
+  padding-bottom: 94px;
+  &__title {
     margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
@@ -10,18 +11,18 @@
     color: var(--primary-text-color);
   }
   
-  &-list {
+  &__list {
     display: flex;
     margin-right: -30px;
   }
   
-  &-list-item {
+  &__item {
     position: relative;
     display: block;
     margin-right: 30px;
   }
   
-  &-list-overlay {
+  &__overlay {
     padding: 27px 0;
     position: absolute;
     bottom: 0;

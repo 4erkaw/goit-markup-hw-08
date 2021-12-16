@@ -1,5 +1,5 @@
-.clients {
-  &-title {
+.clients-section{
+  &__title {
     margin-bottom: 50px;
 
     font-weight: 700;
@@ -9,12 +9,12 @@
     letter-spacing: 0.03em;
   }
 
-  &-list {
+  &__list {
     display: flex;
     margin-right: -30px;
   }
 
-  &-item {
+  &__item {
     margin-right: 30px;
 
     width: 170px;
@@ -36,7 +36,7 @@
     }
   }
 
-  &-link {
+  &__link {
     color: #afb1b8;
     padding: 14px 32px;
 
@@ -48,7 +48,7 @@
     }
   }
 
-  &-logo {
+  &__logo {
     fill: currentColor;
   }
 }
