@@ -396,7 +396,7 @@ textarea {
   background-image: url(../img/astronaut1.svg);
 }
 
-.footer-bg {
+.bg {
   background-color: var(--footer-font-color);
   margin: 0 auto;
   padding-top: 60px;
@@ -430,7 +430,7 @@ textarea {
   margin-bottom: 9px;
 }
 
-.address {
+.footer-address {
   font-size: 14px;
   line-height: 1.71;
   font-style: normal;
@@ -455,16 +455,16 @@ textarea {
   color: var(--primary-font-color);
 }
 
-.team-social-footer {
+.footer-team-social {
   display: flex;
   margin-right: -10px;
 }
 
-.team-item-footer {
+.footer-team-item {
   margin-right: 10px;
 }
 
-.team-link-footer {
+.footer-team-link {
   height: 44px;
   width: 44px;
   background-color: #43444d;
@@ -476,13 +476,13 @@ textarea {
   transition: background-color 250ms var(--animate), color 250ms var(--animate), transform 250ms var(--animate);
 }
 
-.team-link-footer:hover, .team-link-footer:focus {
+.footer-team-link:hover, .footer-team-link:focus {
   background-color: var(--accent-color);
   color: var(--primary-font-color);
   transform: scale(1.1);
 }
 
-.team-icon-footer {
+.footer-team-icon {
   fill: currentColor;
 }
 
@@ -584,8 +584,43 @@ textarea {
   margin-right: 93px;
 }
 
-.head {
-  color: var(--primary-text-color);
+.header-contacts {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-contacts a:hover,
+.header-contacts a:focus {
+  color: var(--accent-color);
+}
+
+.header-contacts-list-item {
+  margin-right: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-contacts-link {
+  display: block;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  padding: 10px 0 10px 0;
+  color: var(--secondary-text-color);
+  transition: color 250ms var(--animate);
+}
+
+.header-contacts-link:hover, .header-contacts-link:focus {
+  color: var(--accent-color);
+}
+
+.header-contacts-list-icon {
+  fill: currentColor;
+  margin-right: 10px;
 }
 
 .nav-list {
@@ -611,11 +646,11 @@ textarea {
   position: relative;
 }
 
-a.current {
+.nav a.current {
   color: var(--accent-color);
 }
 
-a.current::after {
+.nav a.current::after {
   margin-top: 28px;
   position: absolute;
   content: "";
@@ -626,48 +661,8 @@ a.current::after {
   border-radius: 2px;
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-link:hover, .nav-link:focus {
   color: var(--accent-color);
-}
-
-.header-contacts {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin-left: auto;
-}
-
-.header-contacts a:hover,
-.header-contacts a:focus {
-  color: var(--accent-color);
-}
-
-.contacts-list-item {
-  margin-right: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-contacts-link {
-  display: block;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  padding: 10px 0 10px 0;
-  color: var(--secondary-text-color);
-  transition: color 250ms var(--animate);
-}
-
-.header-contacts-link:hover, .header-contacts-link:focus {
-  color: var(--accent-color);
-}
-
-.contacts-list-icon {
-  fill: currentColor;
-  margin-right: 10px;
 }
 
 .main-hidden-title {
