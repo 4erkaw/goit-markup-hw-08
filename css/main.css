@@ -77,7 +77,7 @@ textarea {
   --animate: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.banner-modal {
+.modal {
   padding: 40px;
   position: absolute;
   top: 50%;
@@ -91,7 +91,7 @@ textarea {
   border-radius: 4px;
 }
 
-.modal-close-button {
+.modal .modal-close-button {
   right: 8px;
   top: 8px;
   position: absolute;
@@ -106,7 +106,7 @@ textarea {
   color: var(--accent-color);
 }
 
-.modal-close-button:hover {
+.modal .modal-close-button:hover {
   fill: currentColor;
 }
 
@@ -156,7 +156,7 @@ textarea {
   fill: currentColor;
 }
 
-.input-icon {
+.modal .input-icon {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -164,7 +164,7 @@ textarea {
   transition: color 250ms var(--animate);
 }
 
-.input-icon:focus + .input-icon {
+.modal .input-icon:focus + .input-icon {
   fill: currentColor;
 }
 
@@ -216,6 +216,11 @@ textarea {
   appearance: none;
 }
 
+.modal-policy-link {
+  color: var(--accent-color);
+  margin-left: 3px;
+}
+
 .checkbox {
   margin-right: 8px;
   display: block;
@@ -223,11 +228,6 @@ textarea {
   height: 15px;
   border: 2px solid var(--primary-text-color);
   border-radius: 2px;
-}
-
-.modal-policy-link {
-  color: var(--accent-color);
-  margin-left: 3px;
 }
 
 .banner-backdrop {
@@ -722,23 +722,6 @@ a.current::after {
   margin-bottom: -30px;
 }
 
-.main-link-item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  width: 370px;
-  position: relative;
-  transition: box-shadow 250ms var(--animate);
-}
-
-.main-link-item:focus, .main-link-item:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.main-list-overlay {
-  position: relative;
-  overflow: hidden;
-}
-
 .main-list-overlay-text {
   position: absolute;
   width: 100%;
@@ -763,9 +746,21 @@ a.current::after {
   transform: translateY(0);
 }
 
-.list-item-desc {
-  padding: 20px 24px;
-  border: 1px solid #eeeeee;
+.main-link-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 370px;
+  position: relative;
+  transition: box-shadow 250ms var(--animate);
+}
+
+.main-link-item:focus, .main-link-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.main-list-overlay {
+  position: relative;
+  overflow: hidden;
 }
 
 .main-list .item-title {
@@ -775,6 +770,11 @@ a.current::after {
   letter-spacing: 0.06em;
   color: var(--primary-text-color);
   padding-bottom: 4px;
+}
+
+.list-item-desc {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .item-text {
