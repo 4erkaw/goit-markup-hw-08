@@ -1,5 +1,5 @@
 .main {
-  &-hidden-title {
+  &-hidden__title {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -10,21 +10,21 @@
     clip: rect(0 0 0 0);
   }
 
-  &-filter {
-    display: block;
-  }
+  // &-filter {
+  //   display: block;
+  // }
 
-  &-list-filter {
+  &-filter {
     display: flex;
     padding-bottom: 50px;
     justify-content: center;
   }
 
-  &-list-item {
+  &-filter__item {
     margin-right: 8px;
   }
 
-  &-button {
+  &-filter__button {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -56,7 +56,20 @@
     margin-bottom: -30px;
   }
 
-  &-list-overlay-text {
+  &-list__item {
+    margin-right: 30px;
+    margin-bottom: 30px;
+    width: 370px;
+    position: relative;
+    transition: box-shadow 250ms var(--animate);
+    &:focus,
+    &:hover {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &-list__text {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -76,33 +89,20 @@
 
     transition: opacity 250ms var(--animate), transform 250ms var(--animate);
 
-    .main-list-link:hover & {
+    .main-list__item:hover & {
       opacity: 1;
       background-color: var(--accent-color);
       transform: translateY(0);
     }
   }
 
-  &-link-item {
-    margin-right: 30px;
-    margin-bottom: 30px;
-    width: 370px;
-    position: relative;
-    transition: box-shadow 250ms var(--animate);
-    &:focus,
-    &:hover {
-      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-        0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-    }
-  }
-
-  &-list-overlay {
+  &-list__overlay {
     position: relative;
     overflow: hidden;
   }
 
   &-list {
-    .item-title {
+    .item__title {
       font-weight: 700;
       font-size: 18px;
       line-height: 2;
@@ -115,12 +115,12 @@
   }
 }
 
-.list-item-desc {
+.list-item__desc {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
 }
 
-.item-text {
+.item__text {
   font-size: 16px;
   line-height: 1.87;
 
