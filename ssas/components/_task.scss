@@ -1,21 +1,22 @@
 .task-section{
   padding-bottom: 94px;
-  &__title {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    letter-spacing: 0.03em;
-  
-    color: var(--primary-text-color);
-  }
-  
-  &__list {
-    display: flex;
-    margin-right: -30px;
-  }
-  
+}
+
+.task__title {
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+
+
+.task-list{
+  display: flex;
+  margin-right: -30px;
   &__item {
     position: relative;
     display: block;
@@ -41,3 +42,5 @@
     color: #ffffff;
   }
 }
+
+

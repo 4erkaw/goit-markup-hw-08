@@ -1,4 +1,7 @@
-.social{
+.social-list{
+  &__item {
+    margin-right: 10px;
+  }
     &__link {
       display: flex;
       width: 44px;

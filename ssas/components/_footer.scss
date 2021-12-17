@@ -14,10 +14,26 @@
     display: flex;
   }
 
-  &-left__list {
-    padding-top: 20px;
+  &__logo {
+    display: block;
+    margin-bottom: 20px;
   }
 
+  &-link {
+    background-color: #43444d;
+    color: var(--primary-font-color);
+    &:hover,
+    &:focus {
+      background: var(--accent-color);
+    }
+  }
+
+  &-icon {
+    fill: currentColor;
+  }
+}
+
+.footer-address {
   &-list__item:not(:last-child) {
     margin-bottom: 9px;
   }
@@ -32,7 +48,7 @@
     color: var(--primary-font-color);
   }
 
-  &-contacts__link {
+  &-list__link {
     font-size: 14px;
     line-height: 1.71;
 
@@ -40,13 +56,12 @@
 
     color: rgba(255, 255, 255, 0.6);
   }
+}
 
-  &-middle {
-    margin-top: 8px;
-    padding-left: 72px;
-  }
-
-  &-middle__title {
+.footer-join {
+  margin-top: 8px;
+  padding-left: 72px;
+  &__title {
     margin-bottom: 20px;
     font-weight: 700;
     font-size: 14px;
@@ -55,34 +70,15 @@
     text-transform: uppercase;
     color: var(--primary-font-color);
   }
-
-  &-middle__list {
+  &__list {
     display: flex;
     margin-right: -10px;
   }
-
-  &-middle__item {
-    margin-right: 10px;
-  }
-
-  &-link {
-    background-color: #43444D;
-    color: var(--primary-font-color);
-    &:hover,
-    &:focus {
-      background: var(--accent-color);
-    }
-  }
-
-  &-icon {
-    fill: currentColor;
-  }
-
-&-right{
-  margin-left: 93px;
 }
 
-  &-sign__title {
+.footer-subs {
+  margin-left: 93px;
+  &__title {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -93,11 +89,11 @@
     margin-bottom: 20px;
   }
 
-  &-sign__block {
+  &__block {
     display: flex;
   }
 
-  &-sign__input {
+  &__input {
     border-radius: 4px;
     padding: 15px 16px;
     margin-right: 12px;
@@ -121,7 +117,8 @@
       border: 2px solid var(--accent-color);
     }
   }
-  &-sign__button {
+
+  &__button {
     display: flex;
     min-width: 200px;
     min-height: 50px;
