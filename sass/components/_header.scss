@@ -1,0 +1,9 @@
+.header {
+  &__logo--accent {
+    color: var(--primary-text-color);
+  }
+
+  &-nav{
+      display: none;
+  }
+}
