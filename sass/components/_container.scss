@@ -1,10 +1,17 @@
 .container {
     margin: 0 auto;
-    width: 1200px;
     padding: 0 15px;
-  }
-  
-  .section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    width: 100%;
+
+    @include mq(mobile){
+      width: 480px;
+    }
+
+    @include mq(tablet){
+      width: 768px;
+    }
+
+    @include mq(desctop){
+      width: 1200px;
+    }
   }

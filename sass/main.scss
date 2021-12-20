@@ -1,7 +1,21 @@
+@import './utils/mixins';
 @import './utils/general';
 @import './utils/variables';
+@import './utils/breakpoints';
+
 
 @import './components/container';
 @import './components/header';
 @import './components/logo';
-@import './utils/breakpoints'
+@import './components/banner';
+@import './components/button';
+@import './components/advantages';
+@import './components/section';
+@import './components/task';
+@import './components/team';
+@import './components/social-link';
+@import './components/clients';
+@import './components/footer';
+@import './components/modal';
+@import './components/backdrop';
+@import './components/portfolio';
