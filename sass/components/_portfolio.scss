@@ -76,6 +76,10 @@
       margin: 15px;
       width: calc((100% - 2 * 30px) / 2);
     }
+
+    @include mq(desctop){
+      width: calc((100% - 3 * 30px) /3);
+    }
   }
 
   &__text {
@@ -84,8 +88,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    padding: 63px 24px;
-    align-self: center;
+    padding: 0 24px;
     font-size: 18px;
     line-height: 1.56;
 
@@ -97,8 +100,24 @@
     opacity: 0;
 
     transition: opacity 250ms var(--animate), transform 250ms var(--animate);
+   
+    @media screen and (min-width: 320px) and (max-width: 479px){
+      overflow: scroll;
+    }
 
-    .project-list__item:hover & {
+    @include mq(tablet) {
+      padding: 49px 24px;
+    }
+
+    @include mq(desctop) {
+      padding: 63px 24px;
+    }
+
+    @media  screen and (min-width: 350px){
+    display: flex;
+    align-items: center;
+    }
+    .project-list__item:hover &{
       opacity: 1;
       background-color: var(--accent-color);
       transform: translateY(0);
