@@ -18,6 +18,11 @@
 
     @include mq(tablet) {
       justify-content: center;
+      padding-bottom: 30px;
+    }
+
+    @include mq(desctop) {
+      padding-bottom: 50px;
     }
   }
 

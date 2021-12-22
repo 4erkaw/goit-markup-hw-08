@@ -189,18 +189,25 @@ textarea {
 }
 
 .header-contacts__link {
+  padding: 5px 0;
   display: block;
   font-weight: 500;
   font-size: 12px;
-  line-height: 1.17;
+  line-height: calc(14/12);
   letter-spacing: 0.02em;
-  padding: 5px 0;
   color: var(--secondary-text-color);
   transition: color 250ms var(--animate);
 }
 
 .header-contacts__link:hover, .header-contacts__link:focus {
   color: var(--accent-color);
+}
+
+@media (min-width: 1200px) {
+  .header-contacts__link {
+    font-size: 14px;
+    line-height: calc(16/14);
+  }
 }
 
 .header-contacts__icon {
@@ -310,6 +317,7 @@ textarea {
 .mob-social-list {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 .mob-social-list__item {
@@ -576,13 +584,20 @@ textarea {
 }
 
 .team__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media (min-width: 1200px) {
+  .team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .team__list {
@@ -685,9 +700,16 @@ textarea {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 28px;
-  line-height: 1.78;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
+}
+
+@media (min-width: 1200px) {
+  .clients__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
 }
 
 .clients-list {
@@ -742,6 +764,7 @@ textarea {
 .footer {
   background-color: var(--footer-font-color);
   margin: 0 auto;
+  padding: 60px 0;
 }
 
 .footer__logo--accent {
@@ -1164,6 +1187,13 @@ textarea {
 @media (min-width: 768px) {
   .filter-list {
     justify-content: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .filter-list {
+    padding-bottom: 50px;
   }
 }
 

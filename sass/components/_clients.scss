@@ -4,10 +4,15 @@
 
     font-weight: 700;
     font-size: 28px;
-    line-height: 1.78;
+    line-height: 1.17;
 
     text-align: center;
     letter-spacing: 0.03em;
+
+    @include mq(desctop){
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
   }
 
   &-list {
